@@ -1,33 +1,33 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Card : MoonBehaviour
 {
-    // rng(random number generator) 1,2·Ö±ğ¶ÔÓ¦Ëæ»úÆ·ÖÊÓëÖÖÀà
+    // rng(random number generator) 1,2åˆ†åˆ«å¯¹åº”éšæœºå“è´¨ä¸ç§ç±»
     private float rng1;
     private int rng2;
-    // Ó°ÏìÒò×Ó ÒÔ¹©ÓÎÏ·²ÎÊı¿ÉÒÔÓ°Ïì³é¿¨¸ÅÂÊ
+    // å½±å“å› å­ ä»¥ä¾›æ¸¸æˆå‚æ•°å¯ä»¥å½±å“æŠ½å¡æ¦‚ç‡
     private float factor;
 
-    // rngµÄÊıÖµÈ·¶¨
+    // rngçš„æ•°å€¼ç¡®å®š
     private void Rng()
     {
-        rng1 = Random.Range(0f, 100f)   // Éú³É0~100µÄËæ»ú¸¡µãÊı
-        rng2 = Random.Range(0,5)    // Éú³ÉËæ»úÕûÊı£¨ÊıÖµ´ı¶¨£¬ÔİÓÃ0~5£©
+        rng1 = Random.Range(0f, 100f)   // ç”Ÿæˆ0~100çš„éšæœºæµ®ç‚¹æ•°
+        rng2 = Random.Range(0,5)    // ç”Ÿæˆéšæœºæ•´æ•°ï¼ˆæ•°å€¼å¾…å®šï¼Œæš‚ç”¨0~5ï¼‰
     }
 
-    // Ó°ÏìÒò×ÓµÄÈ·¶¨
+    // å½±å“å› å­çš„ç¡®å®š
     private virtual void Factor()
     {
-        factor = 0; // Ëã·¨´ı¶¨
+        factor = 0; // ç®—æ³•å¾…å®š
     }
 
-    // ¾²Ì¬º¯Êı ³é¿¨
+    // é™æ€å‡½æ•° æŠ½å¡
     public static void DrawCard()
     {
         Factor();
         Rng();
-        // Ëã·¨´ı¶¨
-        // ¸ù¾İ³é¿¨½á¹û´´½¨·ÀÊØµ¥Î»ÊµÀı´ı²¹³ä
+        // ç®—æ³•å¾…å®š
+        // æ ¹æ®æŠ½å¡ç»“æœåˆ›å»ºé˜²å®ˆå•ä½å®ä¾‹å¾…è¡¥å……
 
     }
 
