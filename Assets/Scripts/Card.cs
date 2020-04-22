@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Card : MoonBehaviour
+public class Card : MonoBehaviour
 {
     // rng(random number generator) 1,2分别对应随机品质与种类
     private float rng1;
@@ -11,12 +11,12 @@ public class Card : MoonBehaviour
     // rng的数值确定
     private void Rng()
     {
-        rng1 = Random.Range(0f, 100f)   // 生成0~100的随机浮点数
-        rng2 = Random.Range(0,5)    // 生成随机整数（数值待定，暂用0~5）
+        rng1 = Random.Range(0f, 100f);   // 生成0~100的随机浮点数
+        rng2 = Random.Range(0, 5); // 生成随机整数（数值待定，暂用0~5）
     }
 
     // 影响因子的确定
-    private virtual void Factor()
+    virtual void Factor()
     {
         factor = 0; // 算法待定
     }
